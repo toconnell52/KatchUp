@@ -2,7 +2,7 @@
     <ion-item-divider>Messages</ion-item-divider>
     <ion-item *ngFor="let message of messageList$ | async" (click)="navigateToMessage(message)">
         <ion-avatar item-left>
-            <img src="assets/img/avatar.png" alt="">
+            <img [src]="message?.userToProfile?.avatar" alt="">
         </ion-avatar>
         <h2>{{message?.userToProfile?.firstName}} {{message?.userToProfile?.lastName}}</h2>
         <p>{{message?.content}}</p>

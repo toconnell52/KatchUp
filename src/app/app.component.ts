@@ -17,7 +17,6 @@ export class MyApp {
     });
 
     platform.ready().then(() => {
-      // this.rootPage = 'LoginPage';
 
       statusBar.styleDefault();
       splashScreen.hide();

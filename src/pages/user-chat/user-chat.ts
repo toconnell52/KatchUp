@@ -40,11 +40,13 @@ export class UserChatPage {
         userToId: this.selectedProfile.$key,
         userToProfile: {
           firstName: this.selectedProfile.firstName,
-          lastName: this.selectedProfile.lastName
+          lastName: this.selectedProfile.lastName,
+          avatar: this.selectedProfile.avatar
         },
         userFromProfile: {
           firstName: this.userProfile.firstName,
-          lastName: this.userProfile.lastName
+          lastName: this.userProfile.lastName,
+          avatar: this.userProfile.avatar
         },
         userFromId: this.userId,
         content: content

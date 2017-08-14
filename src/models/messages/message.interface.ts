@@ -5,11 +5,13 @@ export interface Message {
     userFromProfile: {
         firstName: string;
         lastName: string;
+        avatar: string;
     };
     userToId: string;
     userToProfile: {
         firstName: string;
         lastName: string;
+        avatar: string;
     };
     content: string;
 }

@@ -26,7 +26,8 @@ export class LastMessageListComponent implements OnInit {
     const selectedProfile = {
       $key: message.userToId,
       firstName: message.userToProfile.firstName,
-      lastName: message.userToProfile.lastName
+      lastName: message.userToProfile.lastName,
+      avatar: message.userToProfile.avatar
     }
 
     this.navCtrl.push('UserChatPage', {profile: selectedProfile})

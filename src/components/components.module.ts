@@ -21,7 +21,7 @@ import { LastMessageListComponent } from "./last-message-list/last-message-list.
         SendMessageBoxComponent,
         ChatMessageComponent,
         OnlineUsersComponent,
-        LastMessageListComponent
+        LastMessageListComponent,
     ],
     imports: [
         IonicModule
@@ -35,7 +35,7 @@ import { LastMessageListComponent } from "./last-message-list/last-message-list.
         SendMessageBoxComponent,
         ChatMessageComponent,
         OnlineUsersComponent,
-        LastMessageListComponent
+        LastMessageListComponent,
     ]
 })
 
