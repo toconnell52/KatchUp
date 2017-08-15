@@ -10,6 +10,7 @@ import { LoginResponse } from '../../models/login/login-response.interface';
 export class RegisterFormComponent {
 
   account = {} as Account;
+  profilePic: string;
   @Output() registerStatus: EventEmitter<LoginResponse>;
 
   constructor(private auth: AuthService) {
@@ -26,6 +27,6 @@ export class RegisterFormComponent {
       console.error(e);
       this.registerStatus.emit(e);
     }
-}
+  }
 
 }

@@ -1,8 +1,5 @@
 <div class="profile-view__image-container">
-    <img *ngIf="userProfile.avatar; else noUserAvatar" class="profile-view__image" [src]="userProfile.avatar" alt="">
-    <ng-template #noUserAvatar>
-        <img class="profile-view__image" [src]="assets/img/profile-placeholder.png" alt="">
-    </ng-template>
+    <img [src]="userProfile.avatar" alt="" (click)="openGallery()">
 </div>
 
 <div *ngIf="userProfile">

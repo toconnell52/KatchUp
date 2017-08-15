@@ -1,5 +1,8 @@
 {
-    "name": "KatchUp",
-    "app_id": "",
-    "type": "ionic-angular"
+  "name": "KatchUp",
+  "app_id": "",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
 }
