@@ -10,7 +10,6 @@ import { ChatMessageComponent } from "./chat-message/chat-message.component";
 import { OnlineUsersComponent } from "./online-users/online-users.component";
 import { LastMessageListComponent } from "./last-message-list/last-message-list.component";
 
-
 @NgModule({
     declarations: [ 
         LoginFormComponent,
@@ -21,7 +20,7 @@ import { LastMessageListComponent } from "./last-message-list/last-message-list.
         SendMessageBoxComponent,
         ChatMessageComponent,
         OnlineUsersComponent,
-        LastMessageListComponent,
+        LastMessageListComponent
     ],
     imports: [
         IonicModule
@@ -35,7 +34,7 @@ import { LastMessageListComponent } from "./last-message-list/last-message-list.
         SendMessageBoxComponent,
         ChatMessageComponent,
         OnlineUsersComponent,
-        LastMessageListComponent,
+        LastMessageListComponent
     ]
 })
 

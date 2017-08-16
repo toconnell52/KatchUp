@@ -1,5 +1,35 @@
-<div class="profile-view__image-container">
-    <img [src]="userProfile.avatar" alt="" (click)="openGallery()">
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script>
+    document.getElementById("getPic").addEventListener("click", getPics, false);
+
+    function getPics() {
+        imagePicker.getPictures(
+            function(result) {
+                var content = '';
+                content += '<img src="' + result + '" class="profile-view__image" style="max-width:200px, max-height:200px"/>';
+                //content += '<img src="data:image/jpg;base64,'+result[i]+'" style="max-width:200px"/>';
+                document.getElementById("imageOutput").innerHTML = content;
+
+                profilePic = result;
+
+            },
+            function(error) {
+                alert('Error: ' + error);
+            }, {
+                // if no title is passed, the plugin should use a sane default (preferrably the same as it was, so check the old one.. there are screenshots in the marketplace doc)
+
+                maximumImagesCount: 1,
+                title: 'Select Profile Pic',
+                quality: 80
+                    //             outputType: imagePicker.OutputType.BASE64_STRING
+            }
+        );
+    }
+</script>
+
+<div class="profile-view__image-container" id="imageOutput">
+    <button ion-button class="center" color="secondary" id="getPic">Select A Profile Picture</button>
 </div>
 
 <div *ngIf="userProfile">

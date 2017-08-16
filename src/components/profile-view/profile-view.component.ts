@@ -14,6 +14,7 @@ export class ProfileViewComponent implements OnInit {
 
   private authUser: User;
   public userProfile: Profile;
+  public profilePic: string = "assets/img/profile-placeholder";
   private loader: Loading;
 
   @Output() existingProfile: EventEmitter<Profile>;
@@ -23,7 +24,7 @@ export class ProfileViewComponent implements OnInit {
 
     this.data.getAuthenticatedUserProfile().subscribe(profile => {
       this.userProfile = profile;
-      this.userProfile.avatar = "assets/img/profile-placeholder";
+      this.userProfile.avatar = this.profilePic;
       this.existingProfile.emit(this.userProfile);
       this.loader.dismiss();
     });
@@ -35,28 +36,6 @@ export class ProfileViewComponent implements OnInit {
     });
 
     this.existingProfile = new EventEmitter<Profile>();
-  }
-
-  openGallery() {
-    const options = {
-      maximumImagesCount: 1,
-      width: 200,
-      height: 200
-    };
-
-      this.imagePicker.getPictures(options).then((image) => {
-  
-        console.log('Image URI: ' + image);
-
-        this.userProfile.avatar = image;
-
-        this.loader.present();
-        this.existingProfile.emit(this.userProfile);
-        this.loader.dismiss();
-      
-      }, (err) => { 
-        console.error(err);
-      });
   }
     
 }

@@ -8,6 +8,7 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { FIREBASE_CONFIG } from './app.firebase.config';
 import { MyApp } from './app.component';
+import { ImagePicker } from '@ionic-native/image-picker';
 import { AuthService } from '../providers/auth/auth.service';
 import { DataService } from '../providers/data/data.service';
 import { ChatService } from "../providers/chat/chat.service";
@@ -35,7 +36,8 @@ import { FormsModule } from '@angular/forms';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AuthService,
     DataService,
-    ChatService
+    ChatService,
+    ImagePicker
   ]
 })
 export class AppModule {
